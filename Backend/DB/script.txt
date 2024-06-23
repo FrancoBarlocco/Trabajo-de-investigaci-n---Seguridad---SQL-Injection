@@ -1,0 +1,18 @@
+CREATE DATABASE SQLInjection;
+
+USE SQLInjection;
+
+CREATE TABLE Users (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(50),
+    Password VARCHAR(100),
+    Type VARCHAR(50)
+);
+
+INSERT INTO Users (Name, Password, Type)
+VALUES ('Admin', '1234567', 'Administrador'),
+       ('Juan', '1234567', 'Usuario'),
+       ('Lucas', '1234567', 'Usuario');
+
+
+SELECT * from Users
