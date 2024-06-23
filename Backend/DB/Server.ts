@@ -1,4 +1,5 @@
 import express, { Application } from "express";
+import multer from 'multer';
 import router from "../routes";
 
 class Server {
@@ -25,11 +26,11 @@ class Server {
         this.app.use(express.json());
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: true }));
-  
     }
   
     routes() {
-        this.app.use(this.Path.general, router);
+        const upload = multer();
+        this.app.use(this.Path.general, upload.none(), router);
     }
   
     listen() {
