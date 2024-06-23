@@ -10,7 +10,7 @@ Moverse a la carpeta Backend y ejecutar:
 
 Ejecutar "npm run dev" para levantar el servidor del frontend
 
-Moverse a la carpeta 
+Moverse a la carpeta Frontend y ejecutar
 
 "npm install -g http-server"
 
