@@ -22,9 +22,7 @@
     </div>
     <button type="submit">Iniciar Sesión</button>
   </form>
-  
 </div>
-
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -53,19 +51,15 @@
       })
       .then(data => {
         console.log('Respuesta del servidor:', data);
-        if (data.loginSuccess) {
+
           alert("Inicio de sesión exitoso");
-        } else {
-          alert("Nombre de usuario o contraseña incorrectos");
-        }
       })
       .catch(error => {
+        alert("Inicio de sesión fallido");
         console.error('Error:', error);
       });
     });
   });
 </script>
-
-
 </body>
 </html>
